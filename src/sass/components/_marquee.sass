@@ -1,0 +1,25 @@
+.c-marquee
+  width: 100%
+  max-width: 100vw
+  font-family: $font-en
+  font-size: 15rem
+  font-weight: 700
+  color: $color-gray-light30
+  margin-bottom: 9rem
+  user-select: none
+  pointer-events: none
+  overflow: hidden
+  &.--footer
+    margin-bottom: -4rem
+  @keyframes aniMarquee
+    0%
+      transform: translateX(0)
+    100%
+      transform: translateX(-50%)
+  &__wrap
+    display: inline-block
+    white-space: nowrap
+    animation: aniMarquee 15s linear infinite
+  &__content
+    display: inline-block
+    margin-right: 3rem

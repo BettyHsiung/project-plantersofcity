@@ -1,0 +1,199 @@
+.u-inline
+  display: inline
+.u-inline-block
+  display: inline-block
+
+.u-w-full
+  width: 100%
+.u-h-full
+  height: 100%
+
+.u-object-fit
+  +size(100%)
+  object-fit: cover
+  object-position: center center
+  &.--abs
+    position: absolute
+    left: 0
+    top: 0
+  &.--right
+    object-position: 0 center
+  &.--top
+    object-position: center 0
+
+.u-px-0
+  padding-left: 0 !important
+  padding-right: 0 !important
+.u-pl-0
+  padding-left: 0 !important
+.u-pr-0
+  padding-right: 0 !important
+.u-pt-0
+  padding-top: 0 !important
+.u-pb-0
+  padding-bottom: 0 !important
+
+.u-pt-120
+  padding-top: var(--space-120)
+.u-pt-40
+  padding-top: var(--space-40)
+
+.u-pb-120
+  padding-bottom: var(--space-120)
+
+
+.u-mr-60
+  margin-right: var(--space-60)
+.u-mr-40
+  margin-right: var(--space-40)
+.u-mr-20
+  margin-right: var(--space-20)
+
+.u-mt-120
+  margin-top: var(--space-120)
+.u-mt-100
+  margin-top: var(--space-100)
+.u-mt-60
+  margin-top: var(--space-60)
+.u-mt-40
+  margin-top: var(--space-40)
+.u-mt-30
+  margin-top: var(--space-30)
+.u-mt-20
+  margin-top: var(--space-20)
+.u-mt-10
+  margin-top: var(--space-10)
+
+.u-mb-120
+  margin-bottom: var(--space-120)
+.u-mb-100
+  margin-bottom: var(--space-100)
+.u-mb-60
+  margin-bottom: var(--space-60)
+.u-mb-40
+  margin-bottom: var(--space-40)
+.u-mb-30
+  margin-bottom: var(--space-30)
+.u-mb-20
+  margin-bottom: var(--space-20)
+.u-mb-10
+  margin-bottom: var(--space-10)
+
+.u-ff-en
+  font-family: $font-en
+.u-fw-400
+  font-weight: 400 !important
+.u-fw-500
+  font-weight: 500 !important
+.u-fw-700
+  font-weight: 700 !important
+
+// 屬性選擇器
+// 只要 class 裡有 u-title 就加上指定樣式
+// [class^="u-title"]
+//   font-weight: 900
+.u-title
+  font-size: 4.7rem
+  font-weight: 700
+  letter-spacing: 0.7rem
+  &.--en
+    font-family: $font-en
+  +media(sm)
+    font-size: 4rem
+  +media(xs)
+    font-size: 3rem
+  &-xl
+    font-family: $font-en
+    font-style: italic
+    font-weight: 500
+    font-size: 12rem
+    +media(xs)
+      font-size: 9rem
+  &-lg
+    font-family: $font-en
+    font-size: 9rem
+    font-weight: 700
+    letter-spacing: 0.5rem
+    line-height: 1
+    +media(xs)
+      font-size: 7rem
+  &-md
+    font-size: 6rem
+    font-weight: 700
+    letter-spacing: 0.5rem
+    line-height: 1.1
+    +media(xs)
+      font-size: 4rem
+  &-sm
+    font-size: 3rem
+    font-weight: 700
+    letter-spacing: 0.3rem
+
+.u-text-shadow
+    text-shadow: 0 0 30px $color-secondary
+
+
+.u-text-xl
+  font-size: 2.5rem
+  letter-spacing: 0.3rem
+  line-height: 1.5
+.u-text-lg
+  font-size: 2.3rem
+  letter-spacing: 0.3rem
+  line-height: 1.5
+  +media(xs)
+    font-size: 1.8rem
+.u-text-md
+  font-size: 1.8rem
+  letter-spacing: 0.3rem
+  line-height: 1.5
+.u-text-sm
+  font-size: 1.5rem
+  letter-spacing: 0.3rem
+  line-height: 1.5
+
+.u-ls-sm
+  letter-spacing: 0.03rem
+
+.u-icon
+  font-size: 2rem
+  &.--footer
+    font-size: 3.5rem
+    letter-spacing: 3.5rem
+
+.u-color-primary
+  color: $color-primary
+.u-color-primary-mid
+  color: $color-primary-mid
+.u-color-secondary
+  color: $color-secondary
+.u-color-deco
+  color: $color-deco
+.u-color-black
+  color: $color-black
+.u-color-gray
+  color: $color-gray
+.u-color-gray90
+  color: $color-gray90
+.u-color-gray-mid
+  color: $color-gray-mid
+.u-color-gray-light
+  color: $color-gray-light
+.u-color-gray-light30
+  color: $color-gray-light30
+.u-color-white
+  color: $color-white
+.u-color-white40
+  color: $color-white40
+
+.u-text-center
+  text-align: center
+.u-text-left
+  text-align: left
+.u-text-right
+  text-align: right
+
+
+
+
+

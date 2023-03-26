@@ -1,0 +1,23 @@
+/* -- card -- */
+.c-card
+  padding: 7rem 0
+  border-bottom: 1px solid $color-black
+  transition: 0.3s
+  cursor: pointer
+  &:hover
+    border-bottom: 1px solid transparent
+  &:hover &
+    &__date
+      background-color: $color-secondary
+      color: $color-white
+  &__wrap
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__date
+    padding: 2.5rem 3.5rem
+    background-color: $color-primary-mid
+    color: $color-deco
+    transition: 0.3s
+  &__title-wrap
+    white-space: nowrap

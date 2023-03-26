@@ -1,0 +1,47 @@
+.l-food
+  +size(100%, 100vh)
+  padding-top: 10rem
+  padding-bottom: 10rem
+  background-color: $color-gray-light
+  &::before, &::after
+    content: ''
+    display: block
+    position: absolute
+    background-color: $color-secondary
+    box-shadow: 0 0 5px $color-secondary-mid
+  &::before
+    left: 0
+    top: 25%
+    +size(100%, 1px)
+  &::after
+    left: 30%
+    top: 0
+    +size(1px, 100%)
+  &__box
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+  &__wrap
+    +size(100%)
+    max-width: 60rem
+    margin-bottom: 5rem
+    &:first-child(1)
+      display: flex 
+      justify-content: flex-end
+    &:nth-child(2)
+      display: flex 
+      justify-content: center
+  &__img-mask
+    padding-bottom: 53%
+  &__content-wrap
+    display: flex
+    align-items: flex-end
+    position: absolute
+    left: 15%
+    top: 20%
+    color: $color-white
+    white-space: nowrap
+    opacity: 1
+
+

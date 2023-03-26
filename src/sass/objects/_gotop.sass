@@ -1,0 +1,25 @@
+.o-gotop
+  display: inline-block
+  position: absolute
+  right: 1vw
+  top: 0
+  transform: translate(-50%, -30%)
+  padding: 2.5rem
+  border-radius: 50%
+  border: 2px solid $color-primary
+  box-shadow: 0 0 4px $color-primary
+  color: $color-primary
+  text-align: center
+  user-select: none
+  cursor: pointer
+  z-index: 10
+  transition: 0.5s
+  &:hover
+    border: 2px solid $color-secondary
+    box-shadow: 0 0 10px $color-secondary
+    color: $color-secondary
+  &__text
+    font-weight: 700
+
+  +media(xs)
+    padding: 0.7rem 0.5rem

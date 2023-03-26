@@ -1,0 +1,268 @@
+doctype html
+html(lang="en")
+  head
+    //- pug 才能用 include，有先後順序
+    include includes/_config.pug
+    include includes/_head.pug
+    
+    //- 網頁描述
+    meta(property="og:description" content=description)
+    meta(name="description" content=description)
+    meta(property="og:title" content=title)
+    title #{title}
+  body
+    include mixins/_marquee.pug
+    include includes/_navbar.pug
+
+    header.l-header.u-mt-100
+      .l-header__marquee.u-color-gray-light50
+        +marquee('Planters of City')
+      .container
+        .l-header__img-mask
+          img.u-object-fit(src="img/banner/banner-img01.jpg" alt=title)
+        .l-header__text-wrap
+          span.l-header__text 都市一處自然的綠洲
+          span.l-header__text 享受深植人心的漫漫時光
+        .l-header__title
+          h1.u-title-lg.u-color-secondary Planters 
+            span of City
+
+
+    section.u-pb-0.u-mt-100
+      .container
+        .u-text-center
+          h2.u-title-md.u-color-primary 植人體驗
+            span.u-title-xl.u-color-gray-light Service
+
+    section.u-mt-100.u-pr-0.l-service
+      .container.--right
+        .l-service__box
+          .l-service__content-wrap
+            .swiper.l-service__swiper.--content(data-aos="fade-up")
+              .swiper-wrapper
+                .swiper-slide
+                  h3.u-title.u-mb-120.u-color-gray90 療癒綠色植物
+                    span 手作
+                  .l-service__content.--one
+                    p.u-text-xl.u-mb-10.u-color-gray90 把充滿療癒感的多肉綠
+                      span 洲裝進你的小世界裡。
+                    p.u-text-sm.u-color-gray-mid 設計盆器/ 組合盆栽/ 種植教學/ 
+                      span 微景觀生態瓶/ 裝飾物與周邊
+                .swiper-slide
+                  h3.u-title.u-mb-120.u-color-gray90 自然感花藝
+                    span 體驗
+                  .l-service__content.--two
+                    p.u-text-xl.u-mb-10.u-color-gray90 乘載回憶重量的花束，
+                      span 希望留住此時的美好時光。
+                    p.u-text-sm.u-color-gray-mid 花藝小物/ 生活情境小物/
+                      span 插花課程與體驗
+                .swiper-slide
+                  h3.u-title.u-mb-120.u-color-gray90 森林系香水
+                    span 體驗
+                  .l-service__content.--three
+                    p.u-text-xl.u-mb-10.u-color-gray90 只想陪伴著你，
+                      span 享受愜意的時光。
+                    p.u-text-sm.u-color-gray-mid 森林系香調/ 香水知識/ 配方設計/ 
+                      span 香水瓶/ 專屬你的森林系體驗
+              .l-service__btn-wrap
+                .l-service__btn.--prev.u-mr-20
+                  i.fas.fa-arrow-left
+                .l-service__btn.--next
+                  i.fas.fa-arrow-right
+          .l-service__img-wrap
+            .swiper.l-service__swiper.--img(data-aos="fade-up")
+              .swiper-wrapper
+                .swiper-slide.l-service__slide-img
+                  .l-service__img-mask
+                    img.u-object-fit(src="img/service/service01.jpg", alt="植人體驗")
+                .swiper-slide.l-service__slide-img
+                  .l-service__img-mask
+                    img.u-object-fit(src="img/service/service02.jpg", alt="植人體驗")
+                .swiper-slide.l-service__slide-img
+                  .l-service__img-mask
+                    img.u-object-fit(src="img/service/service03.jpg", alt="植人體驗")
+
+
+
+    section.l-plants.u-mt-80
+      .container
+        .l-plants__title.u-mb-100.u-text-right
+          h2.u-title-md.u-color-primary 植人嚴選
+            span.u-title-xl.u-color-gray-light Plants
+
+        .row.u-mb-120
+          .col-md-12
+            .l-plants__wrap
+              .l-plants__img-mask
+                img.u-object-fit(src="img/plants/plants01.jpg", alt="植人嚴選")
+              .l-plants__top-wrap
+                span.u-text-lg.u-color-gray 龜背芋 /
+                span.u-title-xl.u-color-primary-mid TOP1
+              .l-plants__content-wrap.u-pt-40
+                p.u-text-lg.u-color-gray-mid 由於好照顧又美觀，其外觀擺放著，讓人有種熱帶雨林的氛圍，讓龜背芋
+                  span 成為本店最熱門的室內植栽。
+
+        .row.u-mb-120
+          .col-md-12
+            .l-plants__wrap
+              .l-plants__content-wrap.u-pt-40
+                p.u-text-lg.u-color-gray-mid 朧月石蓮花又稱寶石花，其栽培與照顧容易，
+                  span 沒有渡夏問題，夏天一樣土乾就可以澆水。
+              .l-plants__img-mask
+                img.u-object-fit(src="img/plants/plants02.jpg", alt="植人嚴選")
+              .l-plants__top-wrap
+                span.u-text-lg.u-color-gray 朧月 /
+                span.u-title-xl.u-color-primary-mid TOP2
+
+        .row.u-mb-120
+          .col-md-12
+            .l-plants__wrap
+              .l-plants__top-wrap
+                span.u-text-lg.u-color-gray 蕨類植物 /
+                span.u-title-xl.u-color-primary-mid TOP3
+              .l-plants__img-mask
+                img.u-object-fit(src="img/plants/plants03.jpg", alt="植人嚴選")
+              .l-plants__content-wrap.u-pt-40
+                p.u-text-lg.u-color-gray-mid 擁有清新翠綠的蕨葉，室內培植蕨類植物好上手，其
+                  span 綠意盎然的氛圍，彷彿置身於森林般的自然舒適。
+
+        .row
+          .col-md-12
+            .l-plants__btn
+              .o-btn
+                a.o-btn__link(href="##") Read More...
+
+
+    section.l-food
+      .container
+        .row
+          .col-md-5
+            .l-food__box
+              .l-food__title-wrap
+                h2.u-title-md.u-color-primary 植人美食
+                  span.u-title-xl.u-color-white40 Food
+              .l-food__text-wrap  
+                p.u-text-lg 在都市一處的植人綠洲，
+                  span 享受深植人心的漫漫時光!
+          .col-md-7
+            article.l-food__wrap
+              a.u-h-full(href="##")
+                .l-food__img-mask
+                  img.u-object-fit.--abs(src="img/food/food01.jpg", alt="植人美食")
+                .l-food__content-wrap
+                  .u-mr-40
+                    h3.u-title-sm.u-mb-10.u-text-shadow 深植
+                      span 肉桂捲/
+                    p.u-text-md 香草巧克力
+                  div
+                    p.u-text-md 清新香草與70%苦甜巧克力的比
+                      span 例搭配，令人難忘的肉桂捲!
+
+
+
+    section.u-pr-0.l-about(uk-parallax="bgy: -100")
+      .container-fluid.u-px-0
+        .row.g-0
+          .col-md-7
+            .l-about__content-wrap
+              .l-about__content
+                h3.u-title.u-mb-10.u-color-white 都市植人
+                p.u-title.--en.u-mb-30.u-color-white Planters of City 
+                p.u-text-xl.u-color-white 期許自己是都市裡一處自然的綠洲 
+                  span //
+                p.u-text-md.u-color-white 取名為都市植人，是期許這間店可以帶給大家「在都市的一處有著自然綠洲的舒適感」，秉持著自然舒適與用心的品牌理念，在選物與植人體驗的安排上堅持專業、細心，給您帶來美好的時光。
+
+          .col-md-5
+            .l-about__title-wrap
+              h2.u-title-md.u-color-deco 品牌理念
+                span.u-title-xl.u-color-white40 About
+
+    section.l-news.u-mt-100
+      .container
+        .row
+          .col-md-5
+            .l-news__title-wrap
+              h2.u-title-md.u-color-primary 最新消息
+                span.u-title-xl.u-color-gray-light News
+              .o-btn.l-news__btn
+                a.o-btn__link(href="##") Read More...
+          .col-md-7
+            .l-news__card-wrap
+              .l-news__card
+                article.c-card
+                  a.c-card__wrap
+                    .c-card__date.u-text-md.u-fw-500.u-mr-60
+                      span 2023.
+                      span 03.12
+                    .c-card__title-wrap.u-mr-60(href="##")
+                      span.u-text-md.u-fw-700.u-color-secondary 活動報報 //
+                      h3.u-title-sm.u-color-gray90 都市植人生活市集
+                    .c-card__content-wrap
+                      p.u-text-md.u-color-gray-mid 許多植人店家齊聚，更提供許多植人店家齊聚，更提供多種體驗與周邊...
+
+              .l-news__card
+                article.c-card
+                  a.c-card__wrap
+                    .c-card__date.u-text-md.u-fw-500.u-mr-60
+                      span 2023.
+                      span 03.01
+                    .c-card__title-wrap.u-mr-60(href="##")
+                      span.u-text-md.u-fw-700.u-color-deco 新品上市 //
+                      h3.u-title-sm.u-color-gray90 限量伯爵布朗尼
+                    .c-card__content-wrap
+                      p.u-text-md.u-color-gray-mid 新口味上市啦，濃郁的伯爵茶香氣布朗尼限量供應唷...
+
+              .l-news__card
+                article.c-card
+                  a.c-card__wrap
+                    .c-card__date.u-text-md.u-fw-500.u-mr-60
+                      span 2023.
+                      span 03.01
+                    .c-card__title-wrap.u-mr-60(href="##")
+                      span.u-text-md.u-fw-700 店內公告 //
+                      h3.u-title-sm.u-color-gray90 2023.3.12 店休
+                    .c-card__content-wrap
+                      p.u-text-md.u-color-gray-mid 這天為舉辦都市植人生活市集，店內休息一天...
+
+
+    include includes/_footer.pug
+
+
+    script(src="js/swiper-bundle.min.js")
+    script(src="js/uikit.min.js")
+    script(src="js/gsap.min.js")
+    script(src="js/ScrollTrigger.min.js")
+    script.
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.l-food__wrap', {
+        scrollTrigger: {
+          trigger: '.l-plants',
+          // trigger 元素, 視窗
+          start: 'bottom bottom',
+          scrub: 1,
+        },
+        y: '100vh',
+      })
+    script.
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.l-about__title-wrap', {
+        scrollTrigger: {
+          trigger: '.l-food',
+          // trigger 元素, 視窗
+          start: 'bottom center',
+          scrub: 1,
+        },
+        x: '-100vw',
+      })
+    script.
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.from('.l-about__content-wrap', {
+        scrollTrigger: {
+          trigger: '.l-food',
+          // trigger 元素, 視窗
+          start: 'bottom center',
+          scrub: 1,
+        },
+        y: '100vh',
+      })
+    include includes/_scripts.pug

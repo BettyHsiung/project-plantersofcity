@@ -1,0 +1,36 @@
+.l-header
+  &__img-mask
+    height: 60rem
+    overflow: hidden
+  &__marquee
+    position: absolute
+    width: 100%
+    left: 0
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 10
+  &__text-wrap
+    display: flex
+    align-items: flex-start
+    position: absolute
+    left: 20rem
+    top: 9rem
+    font-size: 2.2rem
+    z-index: 99
+  &__text
+    padding: 2.5rem 1.5rem
+    writing-mode: vertical-lr
+    color: $color-gray
+    letter-spacing: 0.5rem
+    margin-right: 3.5rem
+    box-shadow: 0 0 50px $color-secondary-mid
+    background-color: $color-white
+  &__title
+    display: flex
+    justify-content: flex-end
+    margin-right: 3rem
+    margin-top: -12rem
+    z-index: 9999
+
+  +media(xl)
+    margin-top: 0

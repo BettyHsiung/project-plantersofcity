@@ -1,0 +1,94 @@
+.l-navbar
+  display: flex
+  justify-content: center
+  align-items: center
+  position: sticky
+  position: -webkit-sticky
+  width: 100%
+  top: 0
+  padding-left: 4vw
+  padding-top: 3rem
+  z-index: 99999
+  &__logo-wrap
+    max-width: 22rem
+    padding: 3.5rem 2vw
+  &__burger
+    display: none
+  &__menu
+    display: flex
+    border-bottom: 2px solid $color-gray-light
+  &__btn-box
+    display: flex
+    &.--icon
+      margin-left: 1rem
+  &__btn
+    padding: 2.8rem 2vw
+    line-height: 1.2
+    // color: $color-gray
+    text-align: center
+    border-bottom: 3px solid transparent
+    transition: 0.3s
+    z-index: 10
+    &:hover
+      color: $color-secondary
+      border-bottom: 3px solid $color-secondary
+    &.--icon
+      display: flex
+      align-items: center
+      height: 100%
+      color: $color-primary
+      &:not(last-child)
+        padding: 2.8rem 1.5vw
+      &:hover
+        color: $color-secondary
+
+
+  +media(xxl)
+    &__btn
+      padding-left: 2.4vw
+      padding-right: 2.4vw
+
+  +media(xl)
+    padding: 0
+    // burger mode
+    &__burger
+      display: block
+      margin-left: auto
+    &__body
+      position: fixed
+      right: 0
+      top: 0
+      +size(0)
+      margin-top: 0
+      background-color: $color-gray-light
+      overflow: hidden
+      transition: width 0.7s 0.7s, height 0.7s 0.7s
+    &__menu
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      width: 100%
+      min-height: 100%
+      transform: translateY(-1rem)
+      padding: 5rem 0
+      transition: transform 0.7s, opacity 0.7s
+      opacity: 0
+    &__btn-box.--icon
+      margin-top: 6rem
+    &__btn-wrap:first-child &__btn::before
+      display: none
+    &__btn.--icon
+      background-color: transparent
+      &::before
+        display: none
+    &.is-opened &
+      &__body
+        width: 100%
+        height: 100vh
+        transition: 0.7s
+      &__menu
+        transform: translateY(0)
+        opacity: 1
+        transition: transform 0.7s 0.7s, opacity 0.7s 0.7s
+
